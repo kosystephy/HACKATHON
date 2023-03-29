@@ -31,7 +31,11 @@ let form=document.chemicals;
         elements["Potassium"]="K";
         function getElement1()
 {
+<<<<<<< Updated upstream
 var elementList="";
+=======
+var elements="";
+>>>>>>> Stashed changes
 var form=document.forms["chemicals"]
 var selectedChemical=form.elements["selectedChemical"];
 for (var i = 0; i < selectedChemical.length; i++)
@@ -42,7 +46,11 @@ for (var i = 0; i < selectedChemical.length; i++)
                     break;
                 }
             }
+<<<<<<< Updated upstream
             return elementList;
+=======
+            return elements;
+>>>>>>> Stashed changes
 }
 
 
@@ -53,23 +61,36 @@ elements1["nitrogen1"]="N";
 elements1["potassium1"]="K";
         function getElement2()
 {
+<<<<<<< Updated upstream
 var elementList1="";
+=======
+var elements1="";
+>>>>>>> Stashed changes
 var form=document.forms["chemicals"]
 var selectedChemical1=form.elements["selectedChemical1"];
 for (var i = 0; i < selectedChemical1.length; i++)
             {
                 if (selectedChemical1[i].checked)
                 {
+<<<<<<< Updated upstream
                     elementList1 = elements1[selectedChemical1[i].value];
                     break;
                 }
             }
             return elementList1;
+=======
+                    elements1 = elements1[selectedChemical1[i].value];
+                    break;
+                }
+            }
+            return elements;
+>>>>>>> Stashed changes
 }
 
 
 function getResult()
 {
+<<<<<<< Updated upstream
     var selectedChemical=form.elements["selectedChemical"];
     var selectedChemical1=form.elements["selectedChemical1"];
 var answer1="";
@@ -82,21 +103,52 @@ var divobj = document.getElementById("result");
    divobj.innerHTML="the element is" +answer1;
    console.log (answer1);
    console.log(Nitrogen);
+=======
+    let form=document.chemicals;
+    var selectedChemical=form.elements["selectedChemical"];
+    var selectedChemical1=form.elements["selectedChemical1"];
+    // var answer=getElement1+getElement2;
+    
+if(getElement1==selectedChemical.Nitrogen && getElement2==selectedChemical1.nitrogen1)
+{
+    var answer1="N2";
+}
+return answer1;
+
+//     if(selectedChemical.Nitrogen.checked&&selectedChemical1.Nitrogen.checked)
+//     {
+// var answer="N2";
+//     }
+//    return answer;
+//    var divobj = document.getElementById("The element");
+//    divobj.innerHTML = "The element is" + answer;
+   divobj.innerHTML="the element is" +answer1;
+   console.log (answer1);
+>>>>>>> Stashed changes
 }
 
 
 function hideResult()
 {
+<<<<<<< Updated upstream
     var divobj = document.getElementById("theElement");
      divobj.style.display = "none";
      console.log(theElement);
+=======
+    var divobj = document.getElementById("The element");
+     divobj.style.display = "none";
+>>>>>>> Stashed changes
 }
     </script>
     <head>
 
     </head>
     <body>
+<<<<<<< Updated upstream
         <form name="chemicals" id="chemicals" onload="hideResult()">
+=======
+        <form name="chemicals" id="chemicals" method="get" onLoad="hideResult">
+>>>>>>> Stashed changes
         <div class="ef">
 <div class="ab">
 <h2>H</h2>
@@ -125,12 +177,18 @@ function hideResult()
         <h2>K</h2>
         <p>Potassium</p>
         <input type="radio"  name="selectedChemical2" value="potassium2" onclick="getResult()" />
+<<<<<<< Updated upstream
         <div id="theElement"></div>
+=======
+>>>>>>> Stashed changes
     </div>
   
    
 </div>
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 </form>
     </body>
     <footer>
