@@ -1,6 +1,7 @@
 
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,14 +18,37 @@
 
 
     <!-- Custom styles for this template -->
-    <link href="css/mystyle.css" rel="stylesheet">
+
 
     <!-- awesome font link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script>
+//         var i = 0;
+// var original = document.getElementById("btn btn-primary");
+
+// function duplicate() {
+//     var clone = original.cloneNode(true); // "deep" clone
+//     clone.id = "btn btn-primary" + ++i;
+
+//     original.parentNode.appendChild(clone);
+
+
+    const originalBtn = document.getElementById('btn btn-primary');
+const duplicateBtn = document.getElementById('btn btn-primary');
+
+duplicateBtn.addEventListener('click', function() {
+  const clone = originalBtn.cloneNode(true);
+  originalBtn.parentNode.insertBefore(clone, originalBtn.nextSibling);
+// });
+
+}
+);
+
+    </script>
    <style>
         
         .btn-group-vertical {
-            margin-top: 15rem; /* Add some top margin */
+            margin-top: 5rem; /* Add some top margin */
         }
         .btn-group-vertical .btn {
                font-size: 1.5rem;
@@ -36,6 +60,10 @@ h1 {
         font-size: 3rem;
         font-weight: bold;
         margin-top: 2rem;
+    }
+    body{
+        background-image: url(./background.jpg);
+        background-size: cover;
     }
 
         
@@ -59,17 +87,17 @@ h1 {
         <div class="row">
             <div class="col-6">
                 <div class="btn-group-vertical">
-                    <button type="button" class="btn btn-primary">Cu</button>
-                    <button type="button" class="btn btn-primary">Al</button>
-                    <button type="button" class="btn btn-primary">Na</button>
-                    <button type="button" class="btn btn-primary">K</button>
+                    <button type="button" class="btn btn-primary" >Cu</button>
+                    <button type="button" class="btn btn-primary" >Al</button>
+                    <button type="button" class="btn btn-primary" >Na</button>
+                    <button type="button" class="btn btn-primary" >K</button>
                 </div>
             </div>
             
             <div class="col-6">
                 <div class="btn-group-vertical">
-                    <button type="button" class="btn btn-secondary">OH</button>
-                    <button type="button" class="btn btn-secondary">S</button>
+                    <button type="button" class="btn btn-secondary" >OH</button>
+                    <button type="button" class="btn btn-secondary" >S</button>
                     <button type="button" class="btn btn-secondary">CO3</button>
 
                 </div>
