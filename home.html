@@ -20,32 +20,118 @@
             flex-direction: start;
         }
     </style>
+    <script>
+let form=document.chemicals;
+
+
+        var elements=new Array();
+        elements["Hydrogen"]="H";
+        elements["Oxygen"]="0";
+        elements["Nitrogen"]="N";
+        elements["Potassium"]="K";
+        function getElement1()
+{
+var elementList="";
+var form=document.forms["chemicals"]
+var selectedChemical=form.elements["selectedChemical"];
+for (var i = 0; i < selectedChemical.length; i++)
+            {
+                if (selectedChemical[i].checked)
+                {
+                    elements = elements[selectedChemical[i].value];
+                    break;
+                }
+            }
+            return elementList;
+}
+
+
+var elements1=new Array();
+elements1["hydrogen1"]="H";
+elements1["oxygen1"]="0";
+elements1["nitrogen1"]="N";
+elements1["potassium1"]="K";
+        function getElement2()
+{
+var elementList1="";
+var form=document.forms["chemicals"]
+var selectedChemical1=form.elements["selectedChemical1"];
+for (var i = 0; i < selectedChemical1.length; i++)
+            {
+                if (selectedChemical1[i].checked)
+                {
+                    elementList1 = elements1[selectedChemical1[i].value];
+                    break;
+                }
+            }
+            return elementList1;
+}
+
+
+function getResult()
+{
+    var selectedChemical=form.elements["selectedChemical"];
+    var selectedChemical1=form.elements["selectedChemical1"];
+var answer1="";
+if(getElement1==elements["Nitrogen"] && getElement2==elements1["nitrogen1"])
+{
+     answer1="N2";
+}
+return answer1;
+var divobj = document.getElementById("result");
+   divobj.innerHTML="the element is" +answer1;
+   console.log (answer1);
+   console.log(Nitrogen);
+}
+
+
+function hideResult()
+{
+    var divobj = document.getElementById("theElement");
+     divobj.style.display = "none";
+     console.log(theElement);
+}
+    </script>
     <head>
 
     </head>
     <body>
+        <form name="chemicals" id="chemicals" onload="hideResult()">
         <div class="ef">
 <div class="ab">
 <h2>H</h2>
 <p>Hydrogen</p>
+<input type="radio"  name="selectedChemical" value="hydrogen"  />
 <h2>O</h2>
 <p>Oxygen</p>
+<input type="radio"  name="selectedChemical" value="oxygen" />
 <h2>N</h2>
 <p>Nitrogen</p>
+<input type="radio"  name="selectedChemical" value="nitrogen"  />
 <h2>K</h2>
 <p>Potassium</p>
+<input type="radio"  name="selectedChemical" value="potassium"  />
 </div>
        <div class="cd">
         <h2>H</h2>
         <p>Hydrogen</p>
+        <input type="radio"  name="selectedChemical2" value="hydrogen2" onclick="getResult()" />
         <h2>O</h2>
         <p>Oxygen</p>
+        <input type="radio"  name="selectedChemical2" value="oxygen2" onclick="getResult()" />
         <h2>N</h2>
         <p>Nitrogen</p>
+        <input type="radio"  name="selectedChemical2" value="nitrogen2" onclick="getResult()" />
         <h2>K</h2>
         <p>Potassium</p>
+        <input type="radio"  name="selectedChemical2" value="potassium2" onclick="getResult()" />
+        <div id="theElement"></div>
     </div>
+  
+   
 </div>
+
+</form>
     </body>
     <footer>
 
